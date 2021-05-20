@@ -3,8 +3,9 @@ import { Button } from "@material-ui/core";
 import { ApplicationTemplate } from "./template";
 
 const App: React.FC = () => {
+  const appProps = { appName: "My App" };
   return (
-    <ApplicationTemplate appName="My App">
+    <ApplicationTemplate {...appProps}>
       <div>
         <Button variant="contained">Default</Button>
         <Button variant="contained" color="primary">

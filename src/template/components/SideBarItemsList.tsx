@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, List, makeStyles } from "@material-ui/core";
-import { useLocation } from "react-router-dom";
-import MenuItem from "./MenuItem";
+import SideBarItem from "./SideBarItem";
 import { DRAWER_LIST } from "./menu";
 
 const useStyles = makeStyles(() => ({
@@ -10,7 +9,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MenuItemsList = () => {
+const SideBarItemsList = () => {
   const classes = useStyles();
 
   //const { pathname } = useLocation();
@@ -19,7 +18,7 @@ const MenuItemsList = () => {
     <Grid>
       <List className={classes.padding}>
         {DRAWER_LIST.map(({ literal, route, Icon }) => (
-          <MenuItem
+          <SideBarItem
             Icon={Icon}
             literal={literal}
             //route={route}
@@ -32,4 +31,4 @@ const MenuItemsList = () => {
   );
 };
 
-export default MenuItemsList;
+export default SideBarItemsList;

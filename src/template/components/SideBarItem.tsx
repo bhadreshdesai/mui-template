@@ -10,8 +10,6 @@ import {
 } from "@material-ui/core";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 
-import { Link } from "react-router-dom";
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     button: {
@@ -46,7 +44,7 @@ type Props = DrawerItem & {
   onClick?: () => void;
 };
 
-const MenuItem: React.FC<Props> = ({
+const SideBarItem: React.FC<Props> = ({
   route,
   literal,
   Icon,
@@ -75,4 +73,4 @@ const MenuItem: React.FC<Props> = ({
   //return route ? <Link to={route}>{link}</Link> : link;
 };
 
-export default MenuItem;
+export default SideBarItem;
