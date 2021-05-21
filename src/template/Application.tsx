@@ -22,14 +22,11 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-type ApplicationTemplateProps = HeaderProps; /*& {
+type ApplicationProps = HeaderProps; /*& {
   someOtherPropName: string;
 };*/
 
-const ApplicationTemplate: React.FC<ApplicationTemplateProps> = ({
-  appName,
-  children
-}) => {
+const Application: React.FC<ApplicationProps> = ({ appName, children }) => {
   const classes = useStyles();
   return (
     <SideBarContextProvider>
@@ -58,4 +55,4 @@ const ApplicationTemplate: React.FC = ({ children }) => {
 };
 */
 
-export { ApplicationTemplate };
+export { Application };

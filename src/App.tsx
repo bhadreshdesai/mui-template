@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Button } from "@material-ui/core";
-import { ApplicationTemplate } from "./template";
+import { Application } from "./template";
 
 const App: React.FC = () => {
   const appProps = { appName: "My App" };
   return (
-    <ApplicationTemplate {...appProps}>
+    <Application {...appProps}>
       <div>
         <Button variant="contained">Default</Button>
         <Button variant="contained" color="primary">
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           Link
         </Button>
       </div>
-    </ApplicationTemplate>
+    </Application>
   );
 };
 

@@ -1,1 +1,1 @@
-export { ApplicationTemplate } from "./ApplicationTemplate";
+export { Application } from "./Application";
