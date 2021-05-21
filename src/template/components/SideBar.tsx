@@ -8,7 +8,7 @@ import {
   useTheme
 } from "@material-ui/core";
 import { useSideBarContext } from "../contexts/SideBarContext";
-import MenuItemsList from "./MenuItemsList";
+import SideBarItemsList from "./SideBarItemsList";
 const drawerWidth = 160;
 const useStyles = makeStyles((theme: Theme) => ({
   drawer: {
@@ -50,7 +50,7 @@ const SideBar: React.FC = () => {
         })
       }}
     >
-      <MenuItemsList />
+      <SideBarItemsList />
     </Drawer>
   );
 };
