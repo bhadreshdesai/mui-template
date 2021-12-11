@@ -6,7 +6,7 @@ import {
   SvgIconTypeMap,
   ListItem,
   ListItemIcon,
-  ListItemText
+  ListItemText,
 } from "@material-ui/core";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 
@@ -15,21 +15,21 @@ const useStyles = makeStyles((theme: Theme) =>
     button: {
       "&:hover": {
         backgroundColor: theme.palette.primary.light,
-        color: theme.palette.common.white
+        color: theme.palette.common.white,
       },
       "&$selected": {
         backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.common.white
-      }
+        color: theme.palette.common.white,
+      },
     },
     selected: {},
     listIcon: {
       minWidth: "auto",
-      paddingRight: theme.spacing(2)
+      paddingRight: theme.spacing(2),
     },
     icon: {
-      color: theme.palette.secondary.main
-    }
+      color: theme.palette.secondary.main,
+    },
   })
 );
 
@@ -39,17 +39,17 @@ export type DrawerItem = {
   Icon: OverridableComponent<SvgIconTypeMap>;
 };
 
-type Props = DrawerItem & {
+type SideBarItemProps = DrawerItem & {
   selected?: boolean;
   onClick?: () => void;
 };
 
-const SideBarItem: React.FC<Props> = ({
+const SideBarItem: React.FC<SideBarItemProps> = ({
   route,
   literal,
   Icon,
   selected,
-  onClick
+  onClick,
 }) => {
   const classes = useStyles();
 
@@ -59,7 +59,7 @@ const SideBarItem: React.FC<Props> = ({
       selected={selected}
       classes={{
         selected: classes.selected,
-        button: classes.button
+        button: classes.button,
       }}
       onClick={onClick}
     >
